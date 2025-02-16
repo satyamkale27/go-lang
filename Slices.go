@@ -46,4 +46,28 @@ func slice() {
 
 	*/
 
+	c := make([]string, len(s)) // it creates the same slice as of s
+	copy(c, s)
+	fmt.Println("copies c from s", c)
+
+	l := s[2:5] //  l := s[2:5]` creates a new slice containing the elements `s[2]`, `s[3]`, and `s[4]`.
+	fmt.Println("sl1", l)
+
+	t := []string{"g", "h", "i"} // We can declare and initialize a variable for slice in a single line as well.
+	fmt.Println("dcl:", t)
+
+	twoD := make([][]int, 3)
+	for i := 0; i < 3; i++ {
+
+		innerLen := i + 1
+		twoD[i] = make([]int, innerLen) // it will create a nill slice at i th position
+
+		for j := 0; j < innerLen; j++ {
+			twoD[i][j] = i + j // allocate the slices that were created
+		}
+
+	}
+
+	fmt.Println("twoD slice", twoD)
+
 }
