@@ -3,7 +3,8 @@ package main
 func main() {
 	// variable()
 	// arrays()
-	slice()
+	//slice()
 	//mapss()
+	function()
 
 }
