@@ -5,6 +5,7 @@ func main() {
 	// arrays()
 	//slice()
 	//mapss()
-	function()
+	//function()
+	sum(1, 2)
 
 }

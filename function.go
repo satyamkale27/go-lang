@@ -25,6 +25,6 @@ func function() {
 	fmt.Println("1+2+3 =", res)
 	a, b := multiReturnValues() // store multiple value from function
 	fmt.Println("res =", a, b)
-	_, c := vardicValues()
-	fmt.Println("res =", c) // If you only want a subset of the returned values, use the blank identifier _.
+	_, c := vardicValues() // If you only want a subset of the returned values, use the blank identifier _.
+	fmt.Println("res =", c)
 }
