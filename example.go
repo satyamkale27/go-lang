@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// variable()
 	// arrays()
@@ -22,5 +24,12 @@ func main() {
 	//}
 	//fmt.Println(fib(7))
 
-	rangexample()
+	// rangexample()
+
+	i := 1
+	fmt.Println("initial", i)
+	zeroval(i)
+	fmt.Println("zeroval", i)
+	zeroptr(&i)
+	fmt.Println("zeroptr", i)
 }
