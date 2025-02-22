@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	// variable()
 	// arrays()
@@ -26,10 +24,12 @@ func main() {
 
 	// rangexample()
 
-	i := 1
-	fmt.Println("initial", i)
-	zeroval(i)
-	fmt.Println("zeroval", i)
-	zeroptr(&i)
-	fmt.Println("zeroptr", i)
+	//i := 1
+	//fmt.Println("initial", i)
+	//zeroval(i)
+	//fmt.Println("zeroval", i)
+	//zeroptr(&i)
+	//fmt.Println("zeroptr", i)
+
+	string()
 }
