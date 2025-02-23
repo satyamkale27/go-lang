@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// variable()
 	// arrays()
@@ -31,5 +33,25 @@ func main() {
 	//zeroptr(&i)
 	//fmt.Println("zeroptr", i)
 
-	string()
+	//stringg()
+
+	fmt.Println(person{"Bob", 20})
+	fmt.Println(person{name: "Bob", age: 42})
+	fmt.Println(person{name: "Fred"})
+	fmt.Println(&person{name: "Ann", age: 40})
+	fmt.Println(newPerson("Jon"))
+
+	s := person{name: "Sean", age: 50}
+	fmt.Println(s.name) // Access struct fields with a dot.
+	s.age = 19          // mutates an instance
+	fmt.Println(s.age)  // structs are mutable
+
+	dog := struct {
+		name   string
+		isGood bool
+	}{
+		"Rex",
+		true,
+	}
+	fmt.Println(dog)
 }
