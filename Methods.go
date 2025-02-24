@@ -5,8 +5,10 @@ type rect struct {
 	width, height int
 }
 
-func (r *rect) area() int { // The receiver (r *rect) is a pointer (*rect), meaning: It allows modifying the actual struct inside the method.  It avoids copying large structs, making it more efficient.
-
+func (r *rect) area() int {
+	// The receiver (r *rect) is a pointer (*rect), meaning: It allows modifying the actual struct inside the method.
+	//It avoids copying large structs, making it more efficient.
+	// r.width = 16 // it modify original struct
 	return r.width * r.height
 
 }
