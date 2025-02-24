@@ -35,23 +35,32 @@ func main() {
 
 	//stringg()
 
-	fmt.Println(person{"Bob", 20})
-	fmt.Println(person{name: "Bob", age: 42})
-	fmt.Println(person{name: "Fred"})
-	fmt.Println(&person{name: "Ann", age: 40})
-	fmt.Println(newPerson("Jon"))
+	//fmt.Println(person{"Bob", 20})
+	//fmt.Println(person{name: "Bob", age: 42})
+	//fmt.Println(person{name: "Fred"})
+	//fmt.Println(&person{name: "Ann", age: 40})
+	//fmt.Println(newPerson("Jon"))
+	//
+	//s := person{name: "Sean", age: 50}
+	//fmt.Println(s.name) // Access struct fields with a dot.
+	//s.age = 19          // mutates an instance
+	//fmt.Println(s.age)  // structs are mutable
+	//
+	//dog := struct {
+	//	name   string
+	//	isGood bool
+	//}{
+	//	"Rex",
+	//	true,
+	//}
+	//fmt.Println(dog)
 
-	s := person{name: "Sean", age: 50}
-	fmt.Println(s.name) // Access struct fields with a dot.
-	s.age = 19          // mutates an instance
-	fmt.Println(s.age)  // structs are mutable
+	r := rect{width: 10, height: 5}
+	fmt.Println(r)
+	fmt.Println(r.perim())
 
-	dog := struct {
-		name   string
-		isGood bool
-	}{
-		"Rex",
-		true,
-	}
-	fmt.Println(dog)
+	rp := &r // Go automatically handles conversion between values and pointers for method calls.
+	fmt.Println(rp.area())
+	fmt.Println(rp.perim())
+
 }

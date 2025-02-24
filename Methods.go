@@ -1,0 +1,17 @@
+package main
+
+// A method in Go is just a function with a receiver. The receiver is what the method operates on
+type rect struct {
+	width, height int
+}
+
+func (r *rect) area() int { // The receiver (r *rect) is a pointer (*rect), meaning: It allows modifying the actual struct inside the method.  It avoids copying large structs, making it more efficient.
+
+	return r.width * r.height
+
+}
+
+func (r rect) perim() int {
+	return 2*r.width + 2*r.height // Now r is a copy of the original struct. Any modifications inside area() won’t affect the original struct.
+	// any modification done to width or height will not modify original instead modify the copy ones
+}

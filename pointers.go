@@ -5,5 +5,5 @@ func zeroval(ival int) { // zeroval has an int parameter, so arguments will be p
 }
 
 func zeroptr(iptr *int) { // changes value of variable  // // Dereferencing the pointer and modifying the original value
-	*iptr = 0
+	*iptr = 0 // modifying the value
 }
