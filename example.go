@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	// variable()
 	// arrays()
@@ -55,12 +53,20 @@ func main() {
 	//}
 	//fmt.Println(dog)
 
-	r := rect{width: 10, height: 5}
-	fmt.Println(r)
-	fmt.Println(r.perim())
+	//r := rect{width: 10, height: 5}
+	//fmt.Println(r)
+	//fmt.Println(r.perim())
+	//
+	//rp := &r // Go automatically handles conversion between values and pointers for method calls.
+	//fmt.Println(rp.area())
+	//fmt.Println(rp.perim())
 
-	rp := &r // Go automatically handles conversion between values and pointers for method calls.
-	fmt.Println(rp.area())
-	fmt.Println(rp.perim())
+	r := recta{width: 3, height: 4}
+	c := circle{radius: 5}
 
+	measure(r) // Calls measure() with a rectangle
+	measure(c) // Calls measure() with a circle
+
+	detectCircle(r)
+	detectCircle(c)
 }
