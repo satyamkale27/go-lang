@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func main() {
 	// variable()
 	// arrays()
@@ -61,12 +63,32 @@ func main() {
 	//fmt.Println(rp.area())
 	//fmt.Println(rp.perim())
 
-	r := recta{width: 3, height: 4}
-	c := circle{radius: 5}
+	//r := recta{width: 3, height: 4}
+	//c := circle{radius: 5}
 
-	measure(r) // Calls measure() with a rectangle
-	measure(c) // Calls measure() with a circle
+	//measure(r) // Calls measure() with a rectangle
+	//measure(c) // Calls measure() with a circle
+	//
+	//detectCircle(r)
+	//detectCircle(c)
 
-	detectCircle(r)
-	detectCircle(c)
+	co := container{ // An instance of container named co is created.
+		base: base{
+			num: 1,
+		},
+		str: "name",
+	}
+
+	fmt.Printf("co={num: %v, str: %v}\n", co.num, co.str)
+	fmt.Println("also num:", co.base.num)
+	fmt.Println("describe:", co.describe()) // The container struct inherits the describe() method from the base struct
+
+	type describer interface {
+		describe() string
+	}
+
+	var d describer = co
+	//  co assigns the variable co (which is an instance of the container struct) to the variable d of type describer.
+	// Interface Satisfaction: The container struct inherits the describe() method from the base struct, so it satisfies the describer interface.
+	fmt.Println("describer:", d.describe())
 }
