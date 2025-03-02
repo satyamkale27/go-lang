@@ -72,23 +72,37 @@ func main() {
 	//detectCircle(r)
 	//detectCircle(c)
 
-	co := container{ // An instance of container named co is created.
-		base: base{
-			num: 1,
-		},
-		str: "name",
-	}
+	//co := container{ // An instance of container named co is created.
+	//	base: base{
+	//		num: 1,
+	//	},
+	//	str: "name",
+	//}
+	//
+	//fmt.Printf("co={num: %v, str: %v}\n", co.num, co.str)
+	//fmt.Println("also num:", co.base.num)
+	//fmt.Println("describe:", co.describe()) // The container struct inherits the describe() method from the base struct
+	//
+	//type describer interface {
+	//	describe() string
+	//}
+	//
+	//var d describer = co
+	////  co assigns the variable co (which is an instance of the container struct) to the variable d of type describer.
+	//// Interface Satisfaction: The container struct inherits the describe() method from the base struct, so it satisfies the describer interface.
+	//fmt.Println("describer:", d.describe())
 
-	fmt.Printf("co={num: %v, str: %v}\n", co.num, co.str)
-	fmt.Println("also num:", co.base.num)
-	fmt.Println("describe:", co.describe()) // The container struct inherits the describe() method from the base struct
+	ints := []int{1, 2, 3, 4}
+	strs := []string{"a", "b", "c", "d"}
 
-	type describer interface {
-		describe() string
-	}
+	fmt.Println(SlicesIndex(ints, 3))
+	fmt.Println(SlicesIndex(strs, "c"))
 
-	var d describer = co
-	//  co assigns the variable co (which is an instance of the container struct) to the variable d of type describer.
-	// Interface Satisfaction: The container struct inherits the describe() method from the base struct, so it satisfies the describer interface.
-	fmt.Println("describer:", d.describe())
+	lst := List[int]{}
+	lst.Push(10)
+	lst.Push(13)
+	lst.Push(23)
+
+	fmt.Println("list", lst.AllElements())
+
 }
