@@ -92,17 +92,25 @@ func main() {
 	//// Interface Satisfaction: The container struct inherits the describe() method from the base struct, so it satisfies the describer interface.
 	//fmt.Println("describer:", d.describe())
 
-	ints := []int{1, 2, 3, 4}
-	strs := []string{"a", "b", "c", "d"}
+	//ints := []int{1, 2, 3, 4}
+	//strs := []string{"a", "b", "c", "d"}
+	//
+	//fmt.Println(SlicesIndex(ints, 3))
+	//fmt.Println(SlicesIndex(strs, "c"))
+	//
+	//lst := List[int]{}
+	//lst.Push(10)
+	//lst.Push(13)
+	//lst.Push(23)
+	//
+	//fmt.Println("list", lst.AllElements())
 
-	fmt.Println(SlicesIndex(ints, 3))
-	fmt.Println(SlicesIndex(strs, "c"))
+	result, err := f(42)
+	if err != nil {
+		fmt.Println("Error:", err)
 
-	lst := List[int]{}
-	lst.Push(10)
-	lst.Push(13)
-	lst.Push(23)
-
-	fmt.Println("list", lst.AllElements())
+	} else {
+		fmt.Println("Result:", result)
+	}
 
 }
