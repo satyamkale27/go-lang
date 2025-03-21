@@ -18,3 +18,7 @@ func rangexample() {
 	}
 
 }
+
+func main() {
+	rangexample()
+}

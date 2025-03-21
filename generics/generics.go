@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func SlicesIndex[S ~[]E, E comparable](s S, v E) int {
 
 	/*
@@ -52,4 +54,20 @@ func (lst *List[T]) AllElements() []T {
 		elems = append(elems, e.val)
 	}
 	return elems
+}
+
+func main() {
+	ints := []int{1, 2, 3, 4}
+	strs := []string{"a", "b", "c", "d"}
+
+	fmt.Println(SlicesIndex(ints, 3))
+	fmt.Println(SlicesIndex(strs, "c"))
+
+	lst := List[int]{}
+	lst.Push(10)
+	lst.Push(13)
+	lst.Push(23)
+
+	fmt.Println("list", lst.AllElements())
+	
 }

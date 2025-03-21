@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"fmt"
 )
 
 func f(arg int) (int, error) {
@@ -10,4 +11,14 @@ func f(arg int) (int, error) {
 		return -1, errors.New("can't work with 42")
 	}
 	return arg + 3, nil
+}
+
+func main() {
+	result, err := f(42)
+	if err != nil {
+		fmt.Println("Error:", err)
+
+	} else {
+		fmt.Println("Result:", result)
+	}
 }

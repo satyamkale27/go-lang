@@ -24,3 +24,9 @@ func arrays() {
 	fmt.Println(twod)
 
 }
+
+func main() {
+
+	arrays()
+
+}

@@ -100,3 +100,7 @@ utf8.RuneCountInString("สวัสดี") will return 6 because there are 6 T
 
 
 */
+
+func main() {
+	stringg()
+}

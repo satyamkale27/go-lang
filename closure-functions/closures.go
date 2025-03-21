@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func intSeq() func() int { //  This function intSeq returns another function, which we define anonymously in the body of intSeq. The returned function closes over the variable i to form a closure.
 	i := 0
 
@@ -23,3 +25,8 @@ fmt.Println(nextInt())  now the closure is called in main func and it executes
 
 
 */
+
+func main() {
+	nextInt := intSeq()    /// `nextInt` refers to the closure returned by `intSeq`
+	fmt.Println(nextInt()) // Prints 1 (i was 0, now it's incremented to 1)
+}

@@ -17,3 +17,9 @@ func variable() {
 	const pi = 3.14 // constant are immutable, they cannot be changed //
 	fmt.Println(pi)
 }
+
+func main() {
+
+	variable()
+
+}

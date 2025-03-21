@@ -12,3 +12,8 @@ func sum(nums ...int) { // this function can take arbitrary number of ints as ar
 	fmt.Println(total)
 
 }
+
+func main() {
+	sum(1, 2)
+
+}

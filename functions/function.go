@@ -28,3 +28,8 @@ func function() {
 	_, c := vardicValues() // If you only want a subset of the returned values, use the blank identifier _.
 	fmt.Println("res =", c)
 }
+
+func main() {
+	function()
+
+}

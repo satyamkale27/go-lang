@@ -28,3 +28,8 @@ func mapss() {
 	_, prs := m["k2"]
 	fmt.Println("prs:", prs)
 }
+
+func main() {
+	mapss()
+
+}

@@ -46,3 +46,15 @@ func detectCircle(g geometry) {
 		fmt.Println("circle with radius", c.radius)
 	}
 }
+
+func main() {
+
+	r := recta{width: 3, height: 4}
+	c := circle{radius: 5}
+
+	measure(r) // Calls measure() with a rectangle
+	measure(c) // Calls measure() with a circle
+
+	detectCircle(r)
+	detectCircle(c)
+}

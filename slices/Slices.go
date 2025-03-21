@@ -71,3 +71,7 @@ func slice() {
 	fmt.Println("twoD slice", twoD)
 
 }
+
+func main() {
+	slice()
+}
