@@ -145,4 +145,12 @@ This guide provides a structured sequence to learn Go programming using the prov
 
 ---
 
-By following this sequence, you will gain a solid understanding of Go programming and its core concepts. Happy learning!
+## Notes in Code Comments
+
+Throughout the Go files in this project, detailed notes and explanations have been provided in the comments. These notes are designed to help you understand the concepts, logic, and functionality of the code in a simpler and more practical way, unlike traditional documentation. They include:
+
+- **Concept Explanations**: Easy-to-understand descriptions of Go features and their usage, with relatable examples.
+- **Code Behavior**: Clear insights into how specific code blocks work, explained step-by-step to make the logic intuitive.
+- **Additional Notes**: Practical clarifications, real-world examples, and best practices to help you apply Go programming concepts effectively.
+
+Make sure to read the comments in the code files as they are written to simplify learning and provide valuable context for each topic.
